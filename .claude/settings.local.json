@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/**)",
-      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/**)"
+      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/**)",
+      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/public/**)",
+      "Bash(mkdir -p \"$HOME/Documents/Création site/alphabet-arabe/public/images\")",
+      "Bash(cp \"$HOME/Documents/Création site/alphabet-arabe/Docs/hero-alphabet-arabe.webp\" \"$HOME/Documents/Création site/alphabet-arabe/public/images/\")",
+      "Bash(lsof -ti:3000,3001,3002,4000,5000,8080)",
+      "Bash(xargs kill:*)",
+      "Bash(cp \"$HOME/Documents/Création site/alphabet-arabe/Docs/logo-alphabet-arabe-fond-bleu.png\" \"$HOME/Documents/Création site/alphabet-arabe/public/images/\")",
+      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/Docs/**)",
+      "Bash(lsof -ti:3000)"
+    ],
+    "additionalDirectories": [
+      "/Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe"
     ]
   }
 }

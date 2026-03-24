@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { NAV_LINKS, CTA_PRINCIPAL } from '@/lib/constants'
 
@@ -9,78 +10,110 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-nuit shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-nuit/95 backdrop-blur-sm shadow-[0_2px_20px_rgba(0,0,0,0.4)]'
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+
         {/* Logo */}
-        <Link href="/" className="font-serif text-albatre text-lg font-bold tracking-tight">
-          alphabet<span className="text-or">-arabe</span>.com
+        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+          <Image
+            src="/images/logo-alphabet-arabe.png"
+            alt="Logo alphabet-arabe.com"
+            width={60}
+            height={60}
+            className="rounded-full transition-transform duration-500 group-hover:scale-110 brightness-0 invert"
+          />
+          <span className="font-serif text-albatre text-base sm:text-lg font-bold tracking-tight leading-none">
+            alphabet<span className="text-or">-arabe</span>.com
+          </span>
         </Link>
 
-        {/* Nav desktop */}
-        <nav className="hidden md:flex items-center gap-6">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-albatre/70 hover:text-or transition-colors duration-200 font-sans"
-            >
-              {link.label}
-            </Link>
+        {/* Nav desktop — séparateurs | */}
+        <nav className="hidden lg:flex items-center gap-0">
+          {NAV_LINKS.slice(0, 4).map((link, i) => (
+            <span key={link.href} className="flex items-center">
+              {i > 0 && (
+                <span className="text-albatre/20 text-xs mx-3 select-none">|</span>
+              )}
+              <Link
+                href={link.href}
+                className="text-xs font-sans font-medium tracking-widest uppercase text-albatre/70 hover:text-or transition-colors duration-200"
+              >
+                {link.label}
+              </Link>
+            </span>
           ))}
         </nav>
 
         {/* CTA desktop */}
         <Link
-          href={CTA_PRINCIPAL.href}
-          className="hidden md:inline-flex btn-or px-5 py-2 text-sm font-sans"
+          href="/lettres-arabes"
+          className="hidden lg:inline-flex btn-or px-5 py-2 text-xs font-sans font-semibold tracking-widest uppercase"
         >
-          {CTA_PRINCIPAL.label}
+          Commencer
         </Link>
 
         {/* Burger mobile */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-label="Ouvrir le menu"
         >
-          <span className={`block w-5 h-px bg-albatre transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-5 h-px bg-albatre transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-px bg-albatre transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span
+            className={`block h-px bg-albatre transition-all duration-300 origin-center ${
+              menuOpen ? 'w-5 rotate-45 translate-y-[6px]' : 'w-5'
+            }`}
+          />
+          <span
+            className={`block h-px bg-albatre transition-all duration-300 ${
+              menuOpen ? 'w-0 opacity-0' : 'w-4'
+            }`}
+          />
+          <span
+            className={`block h-px bg-albatre transition-all duration-300 origin-center ${
+              menuOpen ? 'w-5 -rotate-45 -translate-y-[6px]' : 'w-5'
+            }`}
+          />
         </button>
       </div>
 
-      {/* Menu mobile */}
-      {menuOpen && (
-        <div className="md:hidden bg-nuit border-t border-bordure/20 px-4 py-4 flex flex-col gap-3">
+      {/* Menu mobile déroulant */}
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="bg-nuit/98 border-t border-or/10 px-5 py-5 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-albatre/80 hover:text-or text-sm font-sans py-1"
+              className="text-albatre/75 hover:text-or text-sm font-sans uppercase tracking-widest transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
           <Link
-            href={CTA_PRINCIPAL.href}
-            className="btn-or px-5 py-2.5 text-sm font-sans text-center mt-2"
+            href="/lettres-arabes"
+            className="btn-or px-5 py-3 text-xs font-sans font-semibold tracking-widest uppercase text-center mt-1"
             onClick={() => setMenuOpen(false)}
           >
-            {CTA_PRINCIPAL.label}
+            Commencer maintenant
           </Link>
         </div>
-      )}
+      </div>
     </header>
   )
 }
