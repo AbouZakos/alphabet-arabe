@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/**)",
+      "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/**)"
+    ]
+  }
+}

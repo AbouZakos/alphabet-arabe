@@ -1,26 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500;600&family=Amiri:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-nuit:    #0A1128;
+  --color-or:      #C5A059;
+  --color-albatre: #F8F9FA;
+  --color-ardoise: #2D3748;
+  --color-bordure: #E2E8F0;
+  --color-carte:   #2C3E6B;
+
+  --font-serif:   'Playfair Display', Georgia, serif;
+  --font-sans:    'Montserrat', system-ui, sans-serif;
+  --font-arabic:  'Amiri', serif;
+
+  --radius-cta: 4px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A1128;
+  color: #F8F9FA;
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
+
+.btn-or {
+  background-color: #C5A059;
+  color: #0A1128;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: box-shadow 0.2s ease;
+}
+
+.btn-or:hover {
+  box-shadow: 0 0 16px rgba(197, 160, 89, 0.35);
+}
+
+.btn-outline-or {
+  border: 1px solid #C5A059;
+  color: #C5A059;
+  border-radius: 4px;
+  background: transparent;
+  font-weight: 500;
+  transition: box-shadow 0.2s ease;
+}
+
+.btn-outline-or:hover {
+  box-shadow: 0 0 16px rgba(197, 160, 89, 0.25);
 }
