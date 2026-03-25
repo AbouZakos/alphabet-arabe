@@ -48,9 +48,9 @@ export default function LeadMagnetPDF() {
             </h2>
 
             <p className="text-albatre/60 font-sans text-base leading-relaxed mb-8">
-              Toutes les 29 lettres arabes sur une seule page : forme isolée, nom,
-              prononciation et translittération. Idéal pour réviser, mémoriser ou
-              afficher chez vous.
+              Toutes les 29 lettres de l&apos;alphabet arabe sur une seule page : forme isolée, nom,
+              prononciation et translittération. Alphabet arabe à imprimer en format A4
+              — idéal pour réviser et mémoriser.
             </p>
 
             {/* Points forts */}
@@ -87,7 +87,7 @@ export default function LeadMagnetPDF() {
                            uppercase tracking-widest text-center"
                 style={{ borderColor: 'rgba(197,160,89,0.4)', color: 'rgba(197,160,89,0.7)' }}
               >
-                Voir les lettres
+                Voir les lettres arabes
               </Link>
             </div>
           </div>

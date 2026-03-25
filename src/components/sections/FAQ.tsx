@@ -6,27 +6,27 @@ import Script from 'next/script'
 const QUESTIONS = [
   {
     q: "Combien de lettres dans l'alphabet arabe ?",
-    a: "L'alphabet arabe compte 29 lettres. Contrairement à l'alphabet latin, toutes les lettres arabes sont des consonnes. Les voyelles courtes sont représentées par des signes diacritiques placés au-dessus ou en-dessous des lettres.",
+    a: "L'alphabet arabe compte 29 lettres, toutes consonantiques. L'arabe est une langue sémitique et langue officielle dans 22 pays arabes — du Maghreb au Moyen-Orient. Contrairement à l'alphabet latin ou à l'alphabet phonétique, l'écriture arabe ne note pas les voyelles brèves dans les textes courants. Les voyelles longues et les voyelles courtes (appelées harakat) sont indiquées par des signes diacritiques, surtout dans le Coran et les livres pour enfants.",
   },
   {
     q: "L'alphabet arabe est-il difficile à apprendre ?",
-    a: "Non — l'alphabet arabe est plus accessible qu'il n'y paraît. Avec une pratique quotidienne de 15 à 20 minutes, la plupart des débutants reconnaissent les 29 lettres en 1 à 2 semaines. La principale difficulté réside dans les lettres qui changent de forme selon leur position dans le mot.",
+    a: "Non — apprendre l'arabe est plus accessible qu'il n'y paraît pour un débutant francophone. La mémorisation des 29 lettres prend 1 à 2 semaines avec une pratique régulière. La principale difficulté vient de l'écriture cursive : les caractères arabes sont liés entre eux et chaque lettre change de forme selon sa position. L'arabe standard moderne, utilisé dans les médias et l'enseignement, est la forme la plus utile pour débuter l'apprentissage de la langue arabe.",
   },
   {
     q: "Dans quel sens s'écrit l'arabe ?",
-    a: "L'arabe s'écrit et se lit de droite à gauche. C'est l'inverse de l'alphabet latin. Cette direction d'écriture est commune à toutes les langues qui utilisent l'alphabet arabe : arabe, persan, ourdou, etc.",
+    a: "L'arabe s'écrit et se lit de droite à gauche — c'est l'inverse de l'alphabet latin. Ce système d'écriture est commun à toutes les langues utilisant l'alphabet arabe. Pour un arabophone ou un apprenant francophone, cette direction s'acquiert naturellement après quelques heures de pratique. L'arabe est parlé par plus de 400 millions de locuteurs dans le monde arabe, en Afrique du Nord, au Maghreb et au Moyen-Orient.",
   },
   {
     q: "Qu'est-ce que les formes début, milieu, fin en arabe ?",
-    a: "En arabe, chaque lettre peut prendre jusqu'à 4 formes différentes selon sa position dans le mot : isolée (seule), initiale (début du mot), médiane (milieu) et finale (fin du mot). Par exemple, la lettre Ba (ب) s'écrit différemment selon qu'elle se trouve au début, au milieu ou à la fin d'un mot. Apprendre ces formes est indispensable pour lire et écrire correctement.",
+    a: "En arabe, chaque lettre peut prendre jusqu'à 4 formes différentes selon sa position dans le mot : isolée, initiale, médiane et finale. Par exemple, la lettre Ba s'écrit différemment selon qu'elle se trouve au début, au milieu ou à la fin d'un mot. Apprendre ces formes est indispensable pour lire un texte arabe et écrire en arabe correctement. Certaines lettres comme le Ra ou le Waw ne se lient qu'à gauche — elles ont seulement 2 formes.",
   },
   {
     q: "Quelle est la différence entre l'arabe et le français pour les voyelles ?",
-    a: "En français, les voyelles (a, e, i, o, u) font partie de l'alphabet. En arabe, les voyelles courtes ne s'écrivent pas dans les textes courants — elles sont représentées par des petits signes diacritiques (harakat) utilisés principalement dans le Coran et les livres pour enfants. C'est pourquoi apprendre la prononciation est essentiel dès le début.",
+    a: "En français, les voyelles font partie de l'alphabet. En arabe, les voyelles courtes ne s'écrivent pas dans les textes courants — elles sont représentées par des petits signes diacritiques utilisés principalement dans le Coran et les livres pour enfants. L'arabe possède aussi des voyelles longues (alif, waw, ya) qui font partie intégrante des mots arabes. C'est pourquoi apprendre la prononciation et la transcription phonétique est essentiel dès le début de l'apprentissage de l'arabe.",
   },
   {
     q: "Comment apprendre à écrire l'alphabet arabe rapidement ?",
-    a: "La méthode la plus efficace est de travailler lettre par lettre, en apprenant d'abord la forme isolée, puis les formes liées. Nos cartes PDF à télécharger gratuitement sont idéales pour mémoriser rapidement les 29 lettres : recto pour la lettre, verso pour la phonétique. Une pratique de 15 minutes par jour suffit pour progresser visiblement en 2 semaines.",
+    a: "La méthode la plus efficace pour apprendre la langue arabe est de travailler lettre par lettre : d'abord la forme isolée, puis les formes liées. Nos cartes PDF gratuites permettent de mémoriser rapidement les 29 lettres et leur transcription phonétique. Une fois l'alphabet maîtrisé, vous pouvez commencer à lire des phrases en arabe, enrichir votre vocabulaire arabe et aborder la grammaire arabe. 15 minutes par jour suffisent pour progresser visiblement en 2 semaines. Pour aller plus loin, un cours de langue avec un professeur natif reste la voie la plus rapide.",
   },
 ]
 

@@ -19,8 +19,8 @@ export default function LettresApercu() {
               Les 29 lettres arabes
             </h2>
             <p className="text-nuit/50 font-sans text-sm mt-2 max-w-md leading-relaxed">
-              Les 29 lettres de l&apos;alphabet arabe, chacune avec sa prononciation.
-              Cliquez sur une lettre pour en savoir plus.
+              Les 29 lettres de l&apos;alphabet arabe en français, chacune avec sa prononciation et translittération.
+              Cliquez pour en savoir plus.
             </p>
           </div>
           <Link
@@ -98,9 +98,9 @@ export default function LettresApercu() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4
                         border-t border-nuit/10 pt-8">
           <p className="text-nuit/40 text-xs font-sans text-center sm:text-left leading-relaxed">
-            L&apos;arabe s&apos;écrit de droite à gauche.
+            Chaque lettre arabe s&apos;écrit de droite à gauche
             <br />
-            Chaque lettre peut avoir jusqu&apos;à 4 formes :
+            et peut prendre jusqu&apos;à 4 formes :
             <br />
             <span className="text-nuit/60">isolée · initiale · médiane · finale</span>
           </p>

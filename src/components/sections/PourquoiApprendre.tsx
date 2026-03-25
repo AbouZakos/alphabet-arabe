@@ -13,7 +13,7 @@ const ETAPES = [
     numero: '02',
     titre: 'Comprendre la prononciation',
     description:
-      'Chaque lettre a un son précis. Certains sons n\'existent pas en français — comme le ع (Aïn) ou le خ (Kha). Notre guide de prononciation vous accompagne lettre par lettre, avec la translittération.',
+      'Chaque lettre de l\'alphabet arabe a un son précis. Notre guide complet de prononciation de l\'alphabet arabe vous accompagne lettre par lettre avec l\'alphabet arabe phonétique — certains sons comme le ع (Aïn) ou le خ (Kha) n\'existent pas en français.',
     lien: { label: 'Guide de prononciation', href: '/alphabet-arabe-prononciation' },
     arabique: 'نطق',
   },
@@ -21,7 +21,7 @@ const ETAPES = [
     numero: '03',
     titre: 'Maîtriser les formes des lettres',
     description:
-      'En arabe, chaque lettre change de forme selon sa position dans le mot : isolée, initiale, médiane ou finale. C\'est ce qu\'on appelle les formes début-milieu-fin. Indispensable pour lire et écrire correctement.',
+      'En arabe, chaque lettre change de forme selon sa position dans le mot. C\'est l\'alphabet arabe début milieu fin : forme isolée, initiale, médiane ou finale. Maîtriser l\'alphabet arabe début milieu fin est indispensable pour lire et écrire correctement.',
     lien: { label: 'Début, milieu, fin', href: '/lettres-debut-milieu-fin' },
     arabique: 'كتابة',
   },
@@ -44,8 +44,9 @@ export default function PourquoiApprendre() {
             Comment apprendre l&apos;alphabet arabe ?
           </h2>
           <p className="text-albatre/55 font-sans text-base leading-relaxed">
-            L&apos;alphabet arabe s&apos;apprend en 3 étapes progressives. Contrairement aux idées reçues,
-            les bases sont accessibles à tous — même sans expérience préalable.
+            Apprendre l&apos;alphabet arabe en français en 3 étapes progressives.
+            L&apos;arabe est une langue étrangère fascinante — langue officielle dans 22 pays
+            et langue du Coran. Les bases sont accessibles à tous, même sans expérience préalable.
           </p>
         </div>
 
@@ -110,12 +111,13 @@ export default function PourquoiApprendre() {
               L&apos;alphabet arabe est-il difficile à apprendre ?
             </h3>
             <p className="text-albatre/50 font-sans text-sm leading-relaxed">
-              Non — l&apos;alphabet arabe est plus simple qu&apos;il n&apos;y paraît. Il contient
-              29 lettres, toutes consonantiques. La plupart des apprenants arrivent à les
-              reconnaître en quelques jours. La vraie difficulté vient de l&apos;écriture
-              cursive, où les lettres se lient entre elles et changent de forme.
-              C&apos;est pourquoi notre méthode commence par les formes isolées avant
-              d&apos;aborder les formes liées.
+              Non — apprendre la langue arabe est plus simple qu&apos;il n&apos;y paraît.
+              Contrairement à l&apos;alphabet latin, l&apos;arabe est une langue sémitique
+              dont les 29 consonnes s&apos;apprennent rapidement. La plupart des
+              débutants francophones reconnaissent chaque lettre arabe en quelques
+              jours. La vraie difficulté vient de l&apos;écriture cursive et des
+              caractères arabes liés — notre méthode commence par les formes
+              isolées avant d&apos;aborder les formes liées et la grammaire arabe.
             </p>
           </div>
           <div>
@@ -123,18 +125,23 @@ export default function PourquoiApprendre() {
               Combien de temps pour apprendre l&apos;alphabet arabe ?
             </h3>
             <p className="text-albatre/50 font-sans text-sm leading-relaxed">
-              Avec une pratique régulière de 15 à 20 minutes par jour, la plupart des
-              débutants reconnaissent les 29 lettres en 1 à 2 semaines. La prononciation
-              et les formes début-milieu-fin demandent 2 à 4 semaines supplémentaires.
-              Pour aller plus loin et apprendre à lire couramment, des{' '}
+              Avec 15 à 20 minutes par jour, la plupart des apprenants
+              reconnaissent les 29 lettres en 1 à 2 semaines. Apprendre à lire
+              l&apos;arabe couramment demande 2 à 4 semaines supplémentaires pour
+              maîtriser la prononciation et la transcription phonétique.
+              L&apos;arabe standard moderne — utilisé dans les médias, l&apos;enseignement
+              et les pays arabes — est la base idéale pour apprendre l&apos;arabe.
+              Langue officielle de 22 pays, l&apos;arabe est aussi la langue du Coran
+              et d&apos;une riche culture arabe millénaire. Pour les francophones souhaitant apprendre les lettres et
+              aller jusqu&apos;à lire le Coran ou écrire des phrases en arabe, des{' '}
               <a
                 href="https://tanger-institut.com/cours-intensif"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-or hover:text-or/80 underline underline-offset-2
+                className="text-or hover:text-or/70 underline underline-offset-2
                            decoration-or/30 transition-colors"
               >
-                cours d&apos;arabe structurés
+                cours de langue arabe structurés
               </a>{' '}
               avec un professeur natif accélèrent considérablement la progression.
             </p>

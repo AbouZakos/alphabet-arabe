@@ -6,7 +6,7 @@ const PILIERS = [
     titre: "L'alphabet",
     sous_titre: 'Les 29 lettres arabes',
     description:
-      'Toutes les lettres arabes avec leur prononciation, leurs formes et leur ordre. Le point de départ de tout apprentissage.',
+      "Tous les caractères arabes avec leur prononciation, leurs formes et leur ordre. Arabe classique ou moderne — le point de départ de tout apprentissage.",
     liens: [
       { label: 'Les 29 lettres',         href: '/lettres-arabes' },
       { label: 'Début, milieu, fin',      href: '/lettres-debut-milieu-fin' },
@@ -21,7 +21,7 @@ const PILIERS = [
     titre: 'Apprentissage',
     sous_titre: 'Méthode structurée',
     description:
-      'Des guides pas à pas pour apprendre à lire et écrire l\'arabe depuis zéro, avec exercices pratiques.',
+      "Des guides pas à pas pour apprendre l'arabe et lire l'arabe depuis zéro. Méthode structurée pour les débutants francophones, avec exercices pratiques.",
     liens: [
       { label: 'Apprendre l\'alphabet',  href: '/apprendre-alphabet-arabe' },
       { label: 'Exercices pratiques',    href: '/exercices-alphabet-arabe' },
@@ -36,7 +36,7 @@ const PILIERS = [
     titre: 'Outils',
     sous_titre: 'Ressources pratiques',
     description:
-      'PDF à imprimer, chiffres arabes, calligraphie — tout ce qu\'il faut pour pratiquer au quotidien.',
+      "PDF à imprimer, chiffres arabes, écrire en arabe, calligraphie — tout ce qu'il faut pour pratiquer au quotidien et progresser rapidement.",
     liens: [
       { label: 'PDF gratuit',            href: '/alphabet-arabe-pdf' },
       { label: 'Chiffres arabes',        href: '/chiffres-arabes' },

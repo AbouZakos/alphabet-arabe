@@ -58,8 +58,8 @@ export default function Hero() {
 
           {/* Sous-titre */}
           <p className="text-albatre/65 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-            Les 29 lettres arabes expliquées simplement, avec prononciation,
-            exercices pratiques et PDF gratuit à imprimer.
+            Apprenez les 29 lettres arabes — l&apos;alphabet en arabe en français,
+            avec prononciation de l&apos;alphabet arabe et translittération. Alphabet arabe à imprimer gratuitement en PDF.
           </p>
 
           {/* CTAs */}
@@ -68,7 +68,7 @@ export default function Hero() {
               href="/lettres-arabes"
               className="btn-or px-7 py-3.5 text-sm font-sans font-semibold tracking-widest uppercase text-center"
             >
-              Commencer ici
+              Voir les lettres arabes
             </Link>
             <Link
               href="/alphabet-arabe-pdf"

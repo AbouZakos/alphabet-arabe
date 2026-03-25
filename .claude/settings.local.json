@@ -10,7 +10,11 @@
       "Bash(xargs kill:*)",
       "Bash(cp \"$HOME/Documents/Création site/alphabet-arabe/Docs/logo-alphabet-arabe-fond-bleu.png\" \"$HOME/Documents/Création site/alphabet-arabe/public/images/\")",
       "Read(//Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe/Docs/**)",
-      "Bash(lsof -ti:3000)"
+      "Bash(lsof -ti:3000)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/images/hero-alphabet-arabe.webp)",
+      "Bash(ls \"/Users/fakhradine/Documents/Création site/alphabet-arabe/public/\"favicon* \"/Users/fakhradine/Documents/Création site/alphabet-arabe/public/\"icon* \"/Users/fakhradine/Documents/Création site/alphabet-arabe/public/\"apple*)",
+      "Bash(ls \"/Users/fakhradine/Documents/Création site/alphabet-arabe/src/app/\"favicon* \"/Users/fakhradine/Documents/Création site/alphabet-arabe/src/app/\"icon*)",
+      "Bash(ls \"/Users/fakhradine/Documents/Création site/alphabet-arabe/public/\"*.pdf)"
     ],
     "additionalDirectories": [
       "/Users/fakhradine/Documents/Création site/alphabet-arabe/$HOME/Documents/Création site/alphabet-arabe"
