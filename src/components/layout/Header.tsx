@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { NAV_LINKS, CTA_PRINCIPAL } from '@/lib/constants'
+import { NAV_LINKS } from '@/lib/constants'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -88,31 +88,63 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Menu mobile déroulant */}
+      {/* Menu mobile plein écran */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+        className={`lg:hidden fixed inset-0 z-[60] bg-nuit flex flex-col items-center justify-center
+                    transition-all duration-500 ${
+          menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className="bg-nuit/98 border-t border-or/10 px-5 py-5 flex flex-col gap-4">
+        {/* Header du menu : logo + croix */}
+        <div className="absolute top-0 left-0 right-0 px-5 sm:px-8 h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
+            <Image
+              src="/images/logo-alphabet-arabe.png"
+              alt="Logo alphabet-arabe.com"
+              width={60}
+              height={60}
+              className="rounded-full brightness-0 invert"
+            />
+            <span className="font-serif text-albatre text-base font-bold tracking-tight leading-none">
+              alphabet<span className="text-or">-arabe</span>.com
+            </span>
+          </Link>
+          <button
+            className="w-10 h-10 flex items-center justify-center
+                       border border-albatre/20 rounded-md hover:border-or transition-colors"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Fermer le menu"
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" strokeWidth="1.5"
+                    strokeLinecap="round" className="text-albatre" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Liens */}
+        <nav className="flex flex-col items-center gap-8">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-albatre/75 hover:text-or text-sm font-sans uppercase tracking-widest transition-colors"
+              className="font-serif text-albatre text-2xl font-bold
+                         hover:text-or transition-colors duration-200"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/lettres-arabes"
-            className="btn-or px-5 py-3 text-xs font-sans font-semibold tracking-widest uppercase text-center mt-1"
-            onClick={() => setMenuOpen(false)}
-          >
-            Commencer maintenant
-          </Link>
-        </div>
+        </nav>
+
+        {/* CTA */}
+        <Link
+          href="/lettres-arabes"
+          className="btn-or px-8 py-3.5 text-xs font-sans font-semibold tracking-widest uppercase mt-12"
+          onClick={() => setMenuOpen(false)}
+        >
+          Commencer maintenant
+        </Link>
       </div>
     </header>
   )

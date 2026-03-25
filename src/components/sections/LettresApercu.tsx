@@ -3,7 +3,7 @@ import { LETTRES_ARABES } from '@/lib/constants'
 
 export default function LettresApercu() {
   return (
-    <section className="bg-nuit py-20 px-4 sm:px-8">
+    <section className="py-20 px-4 sm:px-8" style={{ backgroundColor: '#F1EDE3' }}>
       <div className="max-w-6xl mx-auto">
 
         {/* En-tête section */}
@@ -15,56 +15,79 @@ export default function LettresApercu() {
                 L&apos;alphabet complet
               </span>
             </div>
-            <h2 className="font-serif text-albatre text-3xl sm:text-4xl font-bold leading-tight">
-              Les 28 lettres arabes
+            <h2 className="font-serif text-nuit text-3xl sm:text-4xl font-bold leading-tight">
+              Les 29 lettres arabes
             </h2>
-            <p className="text-albatre/50 font-sans text-sm mt-2 max-w-md leading-relaxed">
-              Chaque lettre possède jusqu&apos;à 4 formes selon sa position dans le mot.
+            <p className="text-nuit/50 font-sans text-sm mt-2 max-w-md leading-relaxed">
+              Les 29 lettres de l&apos;alphabet arabe, chacune avec sa prononciation.
               Cliquez sur une lettre pour en savoir plus.
             </p>
           </div>
           <Link
             href="/lettres-arabes"
-            className="btn-outline-or px-5 py-2.5 text-xs font-sans uppercase tracking-widest whitespace-nowrap self-start sm:self-auto"
+            className="border border-nuit/30 hover:border-or text-nuit/70 hover:text-or
+                       px-5 py-2.5 text-xs font-sans uppercase tracking-widest
+                       rounded-cta transition-all duration-200
+                       whitespace-nowrap self-start sm:self-auto"
           >
             Voir le guide complet →
           </Link>
         </div>
 
-        {/* Grille des 28 lettres */}
-        <div className="grid grid-cols-4 sm:grid-cols-7 lg:grid-cols-7 gap-3">
+        {/* Grille 29 lettres — direction RTL (Alif à droite) */}
+        <div
+          className="grid grid-cols-4 sm:grid-cols-7 gap-3"
+          style={{
+            direction: 'rtl',
+          }}
+        >
           {LETTRES_ARABES.map((lettre) => (
             <Link
-              key={lettre.nom}
+              key={lettre.position}
               href="/lettres-arabes"
               className="group relative flex flex-col items-center justify-center
-                         bg-ardoise/30 border border-bordure/10
-                         hover:border-or/40 hover:bg-ardoise/50
+                         bg-white border border-bordure
+                         hover:border-or hover:scale-105
                          rounded-lg p-3 sm:p-4
-                         transition-all duration-200
-                         cursor-pointer"
+                         transition-all duration-200 cursor-pointer
+                         shadow-[0_2px_8px_rgba(10,17,40,0.08)]
+                         hover:shadow-[0_4px_16px_rgba(197,160,89,0.18)]
+                         active:scale-95"
             >
               {/* Numéro */}
-              <span className="absolute top-1.5 left-2.5 text-albatre/20 text-[10px] font-sans">
+              <span
+                className="absolute top-1.5 text-[10px] font-sans text-nuit/25 group-hover:text-or/60 transition-colors"
+                style={{ right: '8px', direction: 'ltr' }}
+              >
                 {lettre.position}
               </span>
 
               {/* Lettre arabe */}
               <span
-                className="font-arabic text-3xl sm:text-4xl text-or/80
+                className={`font-arabic text-4xl text-nuit/75
                            group-hover:text-or group-hover:scale-110
-                           transition-all duration-200 leading-none mb-2"
+                           transition-all duration-200 leading-none mt-1
+                           ${['ج', 'ح', 'خ'].includes(lettre.arabe) ? 'mb-4' : 'mb-2'}`}
               >
                 {lettre.arabe}
               </span>
 
               {/* Nom français */}
-              <span className="text-albatre/60 text-[11px] font-sans group-hover:text-albatre/90 transition-colors text-center leading-tight">
-                {lettre.nom.replace('Ha2', 'Ha')}
+              <span
+                className="text-nuit/55 text-[11px] font-sans
+                           group-hover:text-nuit/90 transition-colors
+                           text-center leading-tight"
+                style={{ direction: 'ltr' }}
+              >
+                {lettre.nom}
               </span>
 
               {/* Translittération */}
-              <span className="text-or/40 text-[10px] font-sans mt-0.5 group-hover:text-or/70 transition-colors">
+              <span
+                className="text-or/50 text-[10px] font-sans mt-0.5
+                           group-hover:text-or transition-colors"
+                style={{ direction: 'ltr' }}
+              >
                 /{lettre.transliteration}/
               </span>
             </Link>
@@ -73,10 +96,13 @@ export default function LettresApercu() {
 
         {/* Bandeau info bas */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4
-                        border-t border-bordure/10 pt-8">
-          <p className="text-albatre/40 text-xs font-sans text-center sm:text-left leading-relaxed">
-            L&apos;arabe s&apos;écrit de droite à gauche. Chaque lettre peut avoir jusqu&apos;à 4 formes :<br className="hidden sm:block" />
-            <span className="text-albatre/60">isolée · initiale · médiane · finale</span>
+                        border-t border-nuit/10 pt-8">
+          <p className="text-nuit/40 text-xs font-sans text-center sm:text-left leading-relaxed">
+            L&apos;arabe s&apos;écrit de droite à gauche.
+            <br />
+            Chaque lettre peut avoir jusqu&apos;à 4 formes :
+            <br />
+            <span className="text-nuit/60">isolée · initiale · médiane · finale</span>
           </p>
           <Link
             href="/alphabet-arabe-pdf"

@@ -3,10 +3,25 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-nuit">
+    <section className="relative min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-nuit">
 
-      {/* Image hero en fond — العربية 3D dorée */}
-      <div className="absolute inset-0 z-0">
+      {/* Image hero mobile — visible en haut */}
+      <div className="relative w-full h-[40vh] mt-10 lg:hidden flex items-center justify-center">
+        <Image
+          src="/images/hero-alphabet-arabe.webp"
+          alt="Calligraphie arabe dorée العربية sur fond bleu nuit"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-contain"
+          sizes="100vw"
+        />
+        {/* Dégradé bas pour transition vers le contenu */}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-nuit to-transparent" />
+      </div>
+
+      {/* Image hero desktop — en fond */}
+      <div className="absolute inset-0 z-0 hidden lg:block">
         <Image
           src="/images/hero-alphabet-arabe.webp"
           alt="Calligraphie arabe dorée العربية sur fond bleu nuit"
@@ -23,7 +38,7 @@ export default function Hero() {
       </div>
 
       {/* Contenu */}
-      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 w-full pt-24 pb-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 w-full pt-0 lg:pt-24 pb-16">
         <div className="max-w-xl">
 
           {/* Badge */}
@@ -36,14 +51,14 @@ export default function Hero() {
 
           {/* H1 */}
           <h1 className="font-serif text-albatre text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] mb-6">
-            Maîtrisez<br />
-            l&apos;alphabet arabe,<br />
-            <span className="text-or">une lettre à la fois.</span>
+            Alphabet arabe :<br />
+            apprendre les 29 lettres{' '}
+            <span className="text-or"><br className="lg:hidden" />en partant de zéro.</span>
           </h1>
 
           {/* Sous-titre */}
           <p className="text-albatre/65 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-            Les 28 lettres arabes expliquées simplement, avec prononciation,
+            Les 29 lettres arabes expliquées simplement, avec prononciation,
             exercices pratiques et PDF gratuit à imprimer.
           </p>
 
@@ -64,9 +79,9 @@ export default function Hero() {
           </div>
 
           {/* Stats rapides */}
-          <div className="flex items-center gap-6 mt-10 pt-8 border-t border-or/15">
+          <div className="flex items-center justify-center sm:justify-start gap-6 mt-10 pt-8 border-t border-or/15">
             {[
-              { valeur: '28',      label: 'lettres arabes' },
+              { valeur: '29',      label: 'lettres arabes' },
               { valeur: '100%',    label: 'gratuit' },
               { valeur: 'PDF',     label: 'à imprimer' },
             ].map((stat) => (
@@ -84,7 +99,7 @@ export default function Hero() {
       </div>
 
       {/* Flèche scroll */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1.5 animate-bounce">
         <span className="text-albatre/30 text-xs font-sans tracking-widest uppercase">Découvrir</span>
         <svg width="16" height="10" viewBox="0 0 16 10" fill="none" className="text-or/50">
           <path d="M1 1L8 8L15 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
